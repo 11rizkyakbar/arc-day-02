@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+nav {
+  height: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 2vw;
+  font-size: small;
+}
+
+nav > * {
+  margin: 5px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav img {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+}
+
+form {
+  width: 47.5sw;
+}
+
+.main-logo {
+  width: 100%;
+  padding: 0 20% svh;
+}
+
+.search-input input {
+  width: 100%;
+  border-radius: 30px;
+  padding: 13px;
+  padding-left: 45px;
+  padding-right: 60px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-input input:focus,
+.search-input input:hover {
+  outline: none;
+  box-shadow: 0 0.5px 0.3px rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.search-input {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 25%;
+  opacity: 0.35;
+}
+
+.mic-icon {
+  right: 20px;
+}
+
+.search-icon {
+  left: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button {
+  color: #3c4043;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border: none;
+  margin: 5vh 1vh 0;
+  border-radius: 1px solid rgba(0, 0, 0, 0);
+}
+
+.buttons button:hover {
+  border: 1px solid #ddd;
+  cursor: pointer;
+  box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.05);
+}
+
+form p {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+/* dibawah ini code untuk membuat tombol dark mode*/
+/* walaupun gagal si kang hehehe*/
+/* saya tmabahkan juga code untuk footer sebagai pemanis aja hehehe*/
+
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(231, 231, 231);
+}
+.footer .row
+{
+    padding: 15px 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.footer .row.row2
+{
+    display: flex;
+    justify-content: space-between;
+}
+.footer >.row.row2 ul
+{
+    display: flex;   
+}
+.footer >.row.row2 ul li
+{
+    list-style: none;
+}
+.footer .row.row2 ul li a
+{
+    text-decoration: none;
+    font-size: 14px;
+    color: #5f6368;
+    margin-right: 25px;
+}
+.footer .row.row2 ul li a
+{
+    text-decoration: none;
+    font-size: 14px;
+    color: #5f6368;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+input[type="checkbox"]
+{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.check
+{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    left: 305px;
+    top: 10px;
+    background: #092c3e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+input[type="checkbox"]:checked ~ .check
+{
+    background: #fff;
+    box-shadow: 0 0 0 1200px #092c3e;
+}
+.check::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+input[type="checkbox"]:checked ~ .check:before
+{
+    transform: translateX(-50px);
+}
+.check::after
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #092c3e;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+input[type="checkbox"]:checked ~ .check::after
+{
+    transform: translateX(0px);
+}
